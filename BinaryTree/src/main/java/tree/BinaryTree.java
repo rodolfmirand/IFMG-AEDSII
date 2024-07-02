@@ -1,4 +1,4 @@
-package dio.arvore;
+package tree;
 
 public class BinaryTree <T extends Comparable<T>>{
 
@@ -22,6 +22,11 @@ public class BinaryTree <T extends Comparable<T>>{
             current.setRightNode(insert(current.getRightNode(), newNode));
         }
         return current;
+    }
+
+    public int countNodes(BinNode<T> root){
+        if(root == null) return 0;
+        return countNodes(root.getLeftNode()) + 1 + countNodes(root.getRightNode());
     }
 
     public void showInOrder(){
@@ -52,6 +57,7 @@ public class BinaryTree <T extends Comparable<T>>{
         System.out.println("\n Exibindo PreOrder:");
         showPreOrder(this.root);
     }
+
     private void showPreOrder(BinNode<T> current){
         if(current != null){
             System.out.print(current.getData() + ", ");
@@ -132,5 +138,9 @@ public class BinaryTree <T extends Comparable<T>>{
         }catch (NullPointerException erro){
             System.out.println("Conteúdo não encontrado. Bloco catch");
         }
+    }
+
+    public BinNode<T> getRoot() {
+        return root;
     }
 }

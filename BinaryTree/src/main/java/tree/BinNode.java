@@ -1,4 +1,4 @@
-package dio.arvore;
+package tree;
 
 public class BinNode <T extends Comparable <T>> {
 

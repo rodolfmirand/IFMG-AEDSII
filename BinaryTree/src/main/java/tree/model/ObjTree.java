@@ -1,4 +1,4 @@
-package dio.arvore.model;
+package tree.model;
 
 public abstract class ObjTree <T> implements Comparable<T> {
 

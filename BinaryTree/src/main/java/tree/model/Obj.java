@@ -1,4 +1,4 @@
-package dio.arvore.model;
+package tree.model;
 
 import java.util.Objects;
 
